@@ -1,54 +1,88 @@
-# React + TypeScript + Vite
+# 🏰 Escape Room Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend interativo para um jogo de Escape Room digital, desenvolvido com React, TypeScript e Vite.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Tecnologias
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
+- [Axios](https://axios-http.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Como rodar o projeto
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Pré-requisitos
+
+- Node.js v18+
+- npm v9+
+- Backend do Escape Room rodando (clonar : [escape-room-backend](https://github.com/LuizPiresS/escape-room-backend))
+
+### Instalação
+
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/LuizPiresS/escape-room-frontend.git
+   cd escape-room-frontend
+   ```
+
+2. Instale as dependências:
+   ```sh
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+   ```sh
+   npm run dev
+   ```
+
+4. Acesse [http://localhost:5173](http://localhost:5173) no navegador.
+
+## 🧩 Estrutura do Projeto
+
+```
+src/
+  components/
+    ProgressBar/
+    Room/
+    WinScreen/
+  App.tsx
+  main.tsx
+  ...
+api.ts
+vite.config.ts
+...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **App.tsx**: Componente principal, gerencia rotas e progresso.
+- **Room/**: Componentes das salas e desafios.
+- **ProgressBar/**: Barra de progresso do jogo.
+- **WinScreen/**: Tela de vitória.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📝 Scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- `npm run dev` — Inicia o servidor de desenvolvimento.
+- `npm run build` — Gera build de produção.
+- `npm run preview` — Visualiza build de produção localmente.
+- `npm run lint` — Executa o linter.
+ 
+## 📦 Build
+
+Para gerar o build de produção:
+```sh
+npm run build
 ```
+
+## 🧪 Testes
+
+> Ainda não implementado. Sugestão: usar [Vitest](https://vitest.dev/) para testes unitários.
+
+## 📄 Licença
+
+MIT
