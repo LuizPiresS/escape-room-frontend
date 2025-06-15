@@ -5,6 +5,7 @@ import CodeChallenge from './CodeChallenge';
 import RiddleChallenge from './RiddleChallenge';
 import PatternChallenge from './PatternChallenge';
 import './Room.css';
+import '../Spinner/spinner.css';
 
 // Tipos fortes
 type ChallengeType = 'code' | 'riddle' | 'pattern';

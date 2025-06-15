@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './PatternChallenge.css';
-
+import '../Spinner/spinner.css';
 interface PatternChallengeProps {
   question: string;
   onCheckAnswer: (answer: string) => Promise<{

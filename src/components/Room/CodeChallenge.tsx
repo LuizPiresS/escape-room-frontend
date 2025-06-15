@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CodeChallenge.css';
-
+import '../Spinner/spinner.css';
 interface CodeChallengeProps {
   question: string;
   onCheckAnswer: (answer: string) => Promise<{ correct: boolean; message: string }>;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './RiddleChallenge.css';
+import '../Spinner/spinner.css';
 
 interface RiddleChallengeProps {
   question: string;
