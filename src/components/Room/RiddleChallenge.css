@@ -1,0 +1,52 @@
+.riddle-challenge {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.riddle-question {
+  font-weight: bold;
+}
+
+.riddle-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.riddle-submit {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+}
+
+.riddle-feedback.success {
+  color: green;
+}
+
+.riddle-feedback.error {
+  color: red;
+}
+
+/* Spinner reutilizado */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
