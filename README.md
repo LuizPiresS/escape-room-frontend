@@ -1,10 +1,8 @@
-# 🏰 Escape Room Frontend
+# Escape Room Digital
 
-Frontend interativo para um jogo de Escape Room digital, desenvolvido com React, TypeScript e Vite.
+Um jogo de Escape Room digital desenvolvido em React + TypeScript.
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+---
 
 ## ✨ Tecnologias
 
@@ -14,75 +12,50 @@ Frontend interativo para um jogo de Escape Room digital, desenvolvido com React,
 - [React Router](https://reactrouter.com/)
 - [Axios](https://axios-http.com/)
 
+---
+
 ## 🚀 Como rodar o projeto
 
-### Pré-requisitos
-
-- Node.js v18+
-- npm v9+
-- Backend do Escape Room rodando (clonar : [escape-room-backend](https://github.com/LuizPiresS/escape-room-backend))
-
-### Instalação
-
-1. Clone o repositório:
-   ```sh
-   git clone https://github.com/LuizPiresS/escape-room-frontend.git
-   cd escape-room-frontend
-   ```
-
-2. Instale as dependências:
+1. Instale as dependências:
    ```sh
    npm install
-   # ou
-   yarn install
    ```
-
-3. Inicie o servidor de desenvolvimento:
+2. Inicie o servidor de desenvolvimento:
    ```sh
    npm run dev
    ```
+3. Acesse [http://localhost:5173](http://localhost:5173) no navegador.
 
-4. Acesse [http://localhost:5173](http://localhost:5173) no navegador.
+---
 
-## 🧩 Estrutura do Projeto
+## 🛠️ Técnicas e Padrões Utilizados
 
-```
-src/
-  components/
-    ProgressBar/
-    Room/
-    WinScreen/
-  App.tsx
-  main.tsx
-  ...
-api.ts
-vite.config.ts
-...
-```
+- **Componentização e Reutilização:**  
+  Cada parte da interface é um componente React separado, facilitando manutenção e escalabilidade.
 
-- **App.tsx**: Componente principal, gerencia rotas e progresso.
-- **Room/**: Componentes das salas e desafios.
-- **ProgressBar/**: Barra de progresso do jogo.
-- **WinScreen/**: Tela de vitória.
+- **Componente Genérico para Desafios:**  
+  O componente `ChallengeForm` centraliza o HTML, lógica e estilos dos desafios, sendo reutilizado por todos os tipos de desafio.
 
-## 📝 Scripts
+- **Tipagem Forte com TypeScript:**  
+  Uso de interfaces e tipos para garantir segurança e autocompletar.
 
-- `npm run dev` — Inicia o servidor de desenvolvimento.
-- `npm run build` — Gera build de produção.
-- `npm run preview` — Visualiza build de produção localmente.
-- `npm run lint` — Executa o linter.
- 
-## 📦 Build
+- **Hooks para Lógica de Dados:**  
+  Uso de hooks (`useState`, `useEffect`) e custom hooks para separar lógica de dados da interface.
 
-Para gerar o build de produção:
-```sh
-npm run build
-```
+- **Feedback Visual e Acessibilidade:**  
+  Feedbacks de sucesso/erro, spinner de carregamento, atributos ARIA e roles nos formulários.
 
-## 🧪 Testes
+- **CSS Modular e Centralizado:**  
+  Cada componente tem seu CSS próprio, e estilos globais (como o spinner) são centralizados.
 
-> Ainda não implementado. Sugestão: usar [Vitest](https://vitest.dev/) para testes unitários.
+- **Gerenciamento de Rotas:**  
+  Uso do React Router para navegação entre salas e tela de vitória.
+
+- **Barra de Progresso:**  
+  Exibe o progresso do usuário de forma visual e acessível.
+
+---
 
 ## 📄 Licença
 
-MIT
+Este projeto está sob a licença MIT.
