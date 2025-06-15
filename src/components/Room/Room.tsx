@@ -41,7 +41,7 @@ function useRoom(roomId: string | undefined) {
         if (isMounted) {
           setRoom(response.data);
         }
-      } catch (err) {
+      } catch {
         if (isMounted) setError('Erro ao carregar sala. Tente novamente.');
       } finally {
         if (isMounted) setLoading(false);
