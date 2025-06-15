@@ -12,7 +12,7 @@ const WinScreen: React.FC<WinScreenProps> = ({ onReset }) => {
   const handlePlayAgain = async () => {
     try {
       await resetGame();
-      onReset(); // Esta é a chamada crucial que faltava
+      onReset();
       navigate('/room/1');
     } catch (error) {
       console.error('Erro ao reiniciar o jogo:', error);

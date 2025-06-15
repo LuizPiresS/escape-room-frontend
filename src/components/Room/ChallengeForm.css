@@ -1,21 +1,21 @@
-.riddle-challenge {
+.challenge-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.riddle-question {
+.challenge-question {
   font-weight: bold;
 }
 
-.riddle-input {
+.challenge-input {
   padding: 0.5rem;
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
 }
 
-.riddle-submit {
+.challenge-submit {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -24,10 +24,10 @@
   margin-top: 0.5rem;
 }
 
-.riddle-feedback.success {
+.challenge-feedback.success {
   color: green;
 }
 
-.riddle-feedback.error {
+.challenge-feedback.error {
   color: red;
 }
