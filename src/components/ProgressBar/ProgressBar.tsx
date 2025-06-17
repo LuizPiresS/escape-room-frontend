@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getProgress } from '../../../api';
+import './ProgressBar.css';
 
 const ProgressBar: React.FC<{ refreshKey: number }> = ({ refreshKey }) => {
   const [progress, setProgress] = useState(0);
